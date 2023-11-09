@@ -1,0 +1,12 @@
+{
+  "version" : "5.1.2.v202310091347",
+  "projects" : [ {
+    "name" : "DWT Prak2",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "DWT Prak2"
+    }
+  } ]
+}

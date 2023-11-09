@@ -1,0 +1,6 @@
+E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\verkauf.csv
+E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\zeit.csv
+E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\verkaeufer.csv
+E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\ort.csv
+E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\kunde.csv
+E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\fahrzeug.csv
