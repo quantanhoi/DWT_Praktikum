@@ -102,7 +102,7 @@
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.database.port.DBDataPortObjectSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.database.port.DBDataPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Default 95550ea4-a9f7-4016-9df7-aba2282a5d48"/>
+            <entry key="port_object_summary" type="xstring" value="Default 0412fb6a-e050-4594-afe8-34a12c82dda2"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
@@ -110,6 +110,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="aaabb58f-518a-4d53-93c5-581dc6bba37a"/>
+        <entry key="file_store_id" type="xstring" value="fce66d53-053f-4cbd-8054-1ca60a3cd0f4"/>
     </config>
 </config>
