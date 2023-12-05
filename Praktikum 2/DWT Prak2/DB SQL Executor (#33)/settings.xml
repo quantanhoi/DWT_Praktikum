@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="statementSeparator" type="xstring" value=";"/>
+        <entry key="statement" type="xstring" value="/*==============================================================*/%%00010/* DWT Praktikum 2%%00009%%00009%%00009%%00009%%00009%%00009%%00009%%00009%%00009%%00009%%00009%%00009*/%%00010/* tabellenschema.sql                                           */%%00010/*==============================================================*/%%00010%%00010drop table if exists VERKAUF;%%00010%%00010drop table if exists FAHRZEUG;%%00010%%00010drop table if exists KUNDE;%%00010%%00010drop table if exists ORT;%%00010%%00010drop table if exists VERKAEUFER;%%00010%%00010drop table if exists ZEIT;%%00010%%00010/*==============================================================*/%%00010/* Table: FAHRZEUG                                              */%%00010/*==============================================================*/%%00010create table FAHRZEUG %%00010(%%00010   F_ID                 integer                        not null,%%00010   F_BEZEICHNUNG        varchar                        null,%%00010   F_TYP                varchar                        null,%%00010   F_KATEGORIE          varchar                        null,%%00010   constraint PK_FAHRZEUG primary key (F_ID)%%00010);%%00010%%00010/*==============================================================*/%%00010/* Table: KUNDE                                                 */%%00010/*==============================================================*/%%00010create table KUNDE %%00010(%%00010   K_ID                 integer                        not null,%%00010   K_NAME               varchar                        null,%%00010   K_WOHNORT            varchar                        null,%%00010   K_STRASSE            varchar                        null,%%00010   K_GESCHLECHT         varchar                        null,%%00010   K_KUNDENGRUPPE       varchar                        null,%%00010   constraint PK_KUNDE primary key (K_ID)%%00010);%%00010%%00010/*==============================================================*/%%00010/* Table: ORT                                                   */%%00010/*==============================================================*/%%00010create table ORT %%00010(%%00010   O_ID                 integer                        not null,%%00010   O_FILIALE            varchar                        null,%%00010   O_STADT              varchar                        null,%%00010   O_BUNDESLAND         varchar                        null,%%00010   O_LAND               varchar                        null,%%00010   constraint PK_ORT primary key (O_ID)%%00010);%%00010%%00010/*==============================================================*/%%00010/* Table: VERKAEUFER                                            */%%00010/*==============================================================*/%%00010create table VERKAEUFER %%00010(%%00010   V_ID                 integer                        not null,%%00010   V_VERKAEUFER          varchar                        null,%%00010   V_GEBIETSLEITER      varchar                        null,%%00010   V_VERTRIEBSLEITER    varchar                        null,%%00010   constraint PK_VERKAEUFER primary key (V_ID)%%00010);%%00010%%00010/*==============================================================*/%%00010/* Table: VERKAUF                                               */%%00010/*==============================================================*/%%00010create table VERKAUF %%00010(%%00010   VK_ID                integer                        not null,%%00010   O_ID                 integer                        null,%%00010   F_ID                 integer                        null,%%00010   Z_ID                 integer                        null,%%00010   V_ID                 integer                        null,%%00010   K_ID                 integer                        null,%%00010   VK_UMSATZ            float                          null,%%00010   constraint PK_VERKAUF primary key (VK_ID)%%00010);%%00010%%00010/*==============================================================*/%%00010/* Table: ZEIT                                                  */%%00010/*==============================================================*/%%00010create table ZEIT %%00010(%%00010   Z_ID                 integer                        not null,%%00010   Z_TAG                integer                        null,%%00010   Z_MONAT              integer                        null,%%00010   Z_QUARTAL            integer                        null,%%00010   Z_JAHR               integer                        null,%%00010   constraint PK_ZEIT primary key (Z_ID)%%00010);%%00010%%00010%%00010%%00010alter table VERKAUF%%00010   add constraint FK_VERKAUF_REFERENCE_ORT foreign key (O_ID)%%00010      references ORT (O_ID)%%00010      on update restrict%%00010      on delete restrict;%%00010%%00010alter table VERKAUF%%00010   add constraint FK_VERKAUF_REFERENCE_FAHRZEUG foreign key (F_ID)%%00010      references FAHRZEUG (F_ID)%%00010      on update restrict%%00010      on delete restrict;%%00010%%00010alter table VERKAUF%%00010   add constraint FK_VERKAUF_REFERENCE_ZEIT foreign key (Z_ID)%%00010      references ZEIT (Z_ID)%%00010      on update restrict%%00010      on delete restrict;%%00010%%00010alter table VERKAUF%%00010   add constraint FK_VERKAUF_REFERENCE_VERKAEUF foreign key (V_ID)%%00010      references VERKAEUFER (V_ID)%%00010      on update restrict%%00010      on delete restrict;%%00010%%00010alter table VERKAUF%%00010   add constraint FK_VERKAUF_REFERENCE_KUNDE foreign key (K_ID)%%00010      references KUNDE (K_ID)%%00010      on update restrict%%00010      on delete restrict;%%00010"/>
+        <config key="multipleStatement_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="multipleStatement" type="xboolean" value="false"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.database.node.manipulation.executor.DBExecutorNodeFactory"/>
+    <entry key="node-name" type="xstring" value="DB SQL Executor"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME database nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.database.nodes"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.1.2.v202310091338"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Database"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.database.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.1.2.v202310091338"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="DB SQL Executor"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.database.port.DBSessionPortObjectSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.database.port.DBSessionPortObject"/>
+            <entry key="port_object_summary" type="xstring" value="Default 95550ea4-a9f7-4016-9df7-aba2282a5d48"/>
+            <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+            <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="fbd41e66-6c28-450c-8eac-eb0498006b7d"/>
+    </config>
+</config>

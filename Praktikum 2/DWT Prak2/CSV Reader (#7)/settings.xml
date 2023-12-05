@@ -26,7 +26,7 @@
                 <config key="path">
                     <entry key="location_present" type="xboolean" value="true"/>
                     <entry key="file_system_type" type="xstring" value="LOCAL"/>
-                    <entry key="path" type="xstring" value="E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\kunde.csv"/>
+                    <entry key="path" type="xstring" value="E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum\Praktikum 2\Daten\kunde.csv"/>
                 </config>
                 <config key="filter_mode_Internals">
                     <entry key="SettingsModelID" type="xstring" value="SMID_FilterMode"/>
@@ -70,7 +70,7 @@
         <config key="table_spec_config_Internals">
             <entry key="version" type="xstring" value="V4_4"/>
             <config key="individual_specs">
-                <config key="E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\kunde.csv">
+                <config key="E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum\Praktikum 2\Daten\kunde.csv">
                     <entry key="num_columns" type="xint" value="6"/>
                     <config key="0">
                         <entry key="name" type="xstring" value="k_id"/>
@@ -282,7 +282,7 @@
                     <entry key="force_type" type="xboolean" value="false"/>
                 </config>
             </config>
-            <entry key="source_group_id" type="xstring" value="E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum 2\Daten\kunde.csv"/>
+            <entry key="source_group_id" type="xstring" value="E:\Vorlesung\Video\5th Sem\Data Warehouse\Praktikum\Praktikum 2\Daten\kunde.csv"/>
             <config key="config_id">
                 <config key="multi_table_read">
                     <config key="settings">
@@ -391,6 +391,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="f7351b55-eca5-412e-9076-a5e2eb369472"/>
+        <entry key="file_store_id" type="xstring" value="0ad87372-3f91-41d1-b5af-32831d880958"/>
     </config>
 </config>

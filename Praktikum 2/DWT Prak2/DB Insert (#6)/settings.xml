@@ -6,6 +6,26 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
+        <config key="failOnError_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="failOnError" type="xboolean" value="true"/>
+        <config key="batchSize_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="batchSize" type="xint" value="1000"/>
+        <config key="showStatus_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="showStatus" type="xboolean" value="true"/>
+        <config key="knime_to_external_mapping_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_dataTypeMapping"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="knime_to_external_mapping"/>
         <config key="dbTable_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_dbmetadata"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -15,6 +35,11 @@
             <entry key="schema" type="xstring" value="sttrthie"/>
             <entry key="table" type="xstring" value="verkaeufer"/>
         </config>
+        <config key="disableDbDataPort_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="disableDbDataPort" type="xboolean" value="false"/>
         <config key="setColumns">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
@@ -45,31 +70,6 @@
                 </config>
             </config>
         </config>
-        <config key="knime_to_external_mapping_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_dataTypeMapping"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="knime_to_external_mapping"/>
-        <config key="batchSize_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="batchSize" type="xint" value="1000"/>
-        <config key="failOnError_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="failOnError" type="xboolean" value="true"/>
-        <config key="showStatus_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="showStatus" type="xboolean" value="true"/>
-        <config key="disableDbDataPort_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="disableDbDataPort" type="xboolean" value="false"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
@@ -99,7 +99,7 @@
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.database.port.DBDataPortObjectSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.database.port.DBDataPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Default e551ff3d-1206-4a12-8b84-ca658c6646e9"/>
+            <entry key="port_object_summary" type="xstring" value="Default 95550ea4-a9f7-4016-9df7-aba2282a5d48"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
@@ -107,6 +107,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="f680b824-90d6-4405-b5fc-6def10da2aba"/>
+        <entry key="file_store_id" type="xstring" value="292e570d-5e53-46c4-a893-03d5f80d1946"/>
     </config>
 </config>
